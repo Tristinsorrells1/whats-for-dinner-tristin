@@ -4,7 +4,93 @@ COLORS
 teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
-red - #ee5253
+red - #ee5253 */
 
-*/
+* {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin: 0 0 0 0;
+    padding: 0;
+    font-weight: bold;
+}
 
+html {
+    height: 100%;
+}
+
+span {
+    white-space: nowrap;
+}
+
+body {
+    margin: 0;
+    background-image: url('./assets/burger-friends.jpg');
+    background-size: cover;
+    height: 100%;
+}
+
+main {
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: space-evenly;
+    min-height: 100%; 
+}
+
+.home-boxs {
+    background-color: rgba(225, 225, 225, .9);
+    height: 200px;
+    width: 300px;
+    margin: 35px 0px;
+    padding: 60px 30px;
+    display: block;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 20px;
+    text-align: left;
+}
+
+
+#pot-image-box {
+    background-image: url('./assets/cookpot.svg');
+    background-size: 85px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#asterisk {
+    color: red;
+    vertical-align: super;
+    font-size: 24px;
+}
+
+span {
+    justify-content: flex-end;
+}
+
+#lets-cook-button {
+    background-color: #0fb9b1;
+    width: 220px;
+    height: 40px;
+    margin: 10px;
+    align-items: flex-end;
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+}
+
+ul {
+    list-style-type: none;
+    flex-direction: column;
+    display: flex; 
+    align-items: flex-start;
+    padding: 0;
+    width: 90%;
+    height: 70%;
+    justify-content: space-evenly;
+}
+
+#navbar {
+    background-color: #0fb9b1;
+    width: 100%;
+    padding: 1em;
+}

@@ -1,10 +1,23 @@
+<!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    
+    <nav id=navbar>What's for Dinner?</nav>
+    <main>
+      <div id="select-item-box" class="home-boxs">What are you looking for?<span id=asterisk>*</span>
+        <ul>
+          <li><input type="radio" value=1> Side</li>
+          <li><input type="radio" value=2> Main Dish</li>
+          <li><input type="radio" value=3> Dessert</li>
+          <li><input type="radio" value=4> Entire Meal</li>
+        </ul>
+        <button type="button" id="lets-cook-button">LET'S COOK!</button>
+      </div>
+       <div id="pot-image-box" class="home-boxs"></div>
+    </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>
