@@ -1,51 +1,34 @@
-# What's for Dinner?
+# What's for Dinner? 
 
-## Overview
+### Abstract:
+This app helps users decide what to eat. Users can select if they would like to eat a main dish, side, or dessert and then the app will provide them with a randomized suggestion. Users can also generate an entire randomized meal suggestion with a main dish, side, and dessert suggestion when they select the "Entire Meal" option and then click the "LET'S COOK" button. 
 
-What's for dinner? The ultimate question. You will be building an app that helps users choose a recipe and put together meals. 
+### Installation Instructions:
+- Users should clone the repository to their local machine: git clone 
+- Users should `cd` into the repository in their terminal: cd whats-for-dinner-tristin
+- Users should open the index.html file: open index.html
 
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
+### Preview of App:
+![Loom_Message_-_27_October_2022_AdobeExpress](https://user-images.githubusercontent.com/109977562/198415356-9a14f543-8d94-4c4a-a725-632e29316aba.gif)
 
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/dinner.html). 
 
-## Learning Goals
+### Context:
+This project was assigned to Mod 1 students in Turing's Front-End Engineering bootcamp. Students were given 6 days to recreate a comp and add functionality of their choosing.
 
+### Contributors:
+This project was created by Tristin Sorrells, find my github [here](https://github.com/Tristinsorrells1)
+
+### Learning Goals:
 - Gain experience building an application that utilizes HTML, CSS and JavaScript
 - Write HTML and CSS to match a provided comp
 - Understand how to listen to and respond to user events
 - Individualize your programming skill set
 
-## Setup
-
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
-
-______________________________________________________  
-# README Template  
-Before turning this project in, erase this line and everything above it and fill in the info below.  
-______________________________________________________  
-
-# What's for Dinner? 
-
-### Abstract:
-[//]: <> (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
-
-### Installation Instructions:
-[//]: <> (What steps does a person have to take to get your app cloned down and running?)
-
-### Preview of App:
-[//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
-
-### Context:
-[//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
-
-### Contributors:
-[//]: <> (Who worked on this application? Link to their GitHubs.)
-
-### Learning Goals:
-[//]: <> (What were the learning goals of this project? What tech did you work with?)
-
 ### Wins + Challenges:
-[//]: <> (What are 2-3 wins you have from this project? What were some challenges you faced - and how did you get over them?)
+##### Wins
+- I completed the minimum viable product multiple days before the deadline 
+- I gained experience writing CSS and semantic HTML
+
+##### Challenges
+- Several of my functions are similar to each other but I had a hard time writing re-usable code
+- I had difficulty using flexbox to recreate the comp
