@@ -36,7 +36,7 @@ main {
     min-height: 100%; 
 }
 
-.home-boxs {
+.home-boxes {
     background-color: rgba(225, 225, 225, .9);
     height: 200px;
     width: 300px;
@@ -93,4 +93,8 @@ ul {
     background-color: #0fb9b1;
     width: 100%;
     padding: 1em;
+}
+
+.hidden {
+    display: none !important;
 }
