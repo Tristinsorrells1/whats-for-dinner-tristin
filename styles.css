@@ -103,12 +103,15 @@ ul {
     font-style: italic;
     text-align: center;
     font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #food-suggestion-box > p {
     font-style: normal;
     font-weight: 600;
     font-size: 40px;
-    
+
 }
 

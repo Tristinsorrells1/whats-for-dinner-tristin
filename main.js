@@ -47,7 +47,6 @@ function randomizeDesserts() {
 }
 
 function seeFoodSuggestion() {
-    console.log("TESTTTT")
     potImageBox.classList.toggle("hidden")
     foodSuggestionBox.classList.toggle("hidden")
     // youShouldMake.classList.toggle("hidden")
