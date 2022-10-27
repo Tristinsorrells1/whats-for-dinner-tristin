@@ -3,6 +3,8 @@
 var sideButton = document.querySelector('#side-button')
 var mainButton = document.querySelector('#main-button')
 var dessertButton = document.querySelector('#dessert-button')
+var letsCookButton = document.querySelector('#lets-cook-button')
+var entireMealButton = document.querySelector('#entire-meal-button')
 var potImageBox = document.querySelector('#pot-image-box')
 var foodSuggestionBox = document.querySelector('#food-suggestion-box')
 var foodIdea = document.querySelector('#food-idea')
@@ -29,6 +31,14 @@ dessertButton.addEventListener('click', function () {
     selectDessert()
 })
 
+letsCookButton.addEventListener('click', function() {
+    getRandomIndex(desserts)
+    seeFoodSuggestion()
+    randomMeal()
+
+})
+
+entireMealButton.addEventListener('click', selectEntireMeal)
 
 
 // Functions
@@ -58,18 +68,34 @@ function selectSide() {
     sideButton.checked = true
     dessertButton.checked = false
     mainButton.checked = false
+    entireMealButton.checked = false
 }
 
 function selectMain() {
     sideButton.checked = false
     dessertButton.checked = false
     mainButton.checked = true
+    entireMealButton.checked = false
 }
 
 function selectDessert() {
     sideButton.checked = false
     dessertButton.checked = true
     mainButton.checked = false
+    entireMealButton.checked = false
+}
+
+function selectEntireMeal() {
+    sideButton.checked = false
+    dessertButton.checked = false
+    mainButton.checked = false
+    entireMealButton.checked = true
+}
+
+function randomMeal(){
+    if (entireMealButton.checked) {
+        foodIdea.innerText = `${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`
+    }
 }
 
 var sides = [
