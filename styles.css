@@ -98,3 +98,17 @@ ul {
 .hidden {
     display: none !important;
 }
+
+#food-suggestion-box {
+    font-style: italic;
+    text-align: center;
+    font-size: 15px;
+}
+
+#food-suggestion-box > p {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    
+}
+
