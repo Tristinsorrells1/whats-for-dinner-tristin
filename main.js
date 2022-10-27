@@ -96,6 +96,7 @@ function randomMeal(){
     if (entireMealButton.checked) {
         foodIdea.innerText = `${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`
     }
+    foodIdea.style.fontSize= "20px"
 }
 
 var sides = [
