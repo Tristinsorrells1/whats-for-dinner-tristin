@@ -5,16 +5,28 @@ var mainButton = document.querySelector('#main-button')
 var dessertButton = document.querySelector('#dessert-button')
 var potImageBox = document.querySelector('#pot-image-box')
 var foodSuggestionBox = document.querySelector('#food-suggestion-box')
-// Event Listeners
+var foodIdea = document.querySelector('#food-idea')
 
+// Event Listeners
 sideButton.addEventListener('click', function(){
     getRandomIndex(sides)
     seeFoodSuggestion()
-    randomize()
+    randomizeSides()
 })
 
-// mainButton.addEventListener('onchange',)
-// dessertButton.addEventListener('onchange',)
+mainButton.addEventListener('click', function () {
+    getRandomIndex(mains)
+    seeFoodSuggestion()
+    randomizeMains()
+})
+
+dessertButton.addEventListener('click', function () {
+    getRandomIndex(desserts)
+    seeFoodSuggestion()
+    randomizeDesserts()
+})
+
+
 
 // Functions
 
@@ -22,14 +34,23 @@ function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
 }
 
-function randomize() {
-foodSuggestionBox.innerText = sides[getRandomIndex(sides)]
+function randomizeSides() {
+foodIdea.innerText = sides[getRandomIndex(sides)]
+}
+
+function randomizeMains() {
+    foodIdea.innerText = mains[getRandomIndex(mains)]
+}
+
+function randomizeDesserts() {
+    foodIdea.innerText = desserts[getRandomIndex(desserts)]
 }
 
 function seeFoodSuggestion() {
     console.log("TESTTTT")
     potImageBox.classList.toggle("hidden")
     foodSuggestionBox.classList.toggle("hidden")
+    // youShouldMake.classList.toggle("hidden")
 }
 
 var sides = [
