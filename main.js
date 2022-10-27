@@ -97,6 +97,7 @@ function randomMeal(){
         foodIdea.innerText = `${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`
     }
     foodIdea.style.fontSize= "20px"
+    foodIdea.style.margin= "20px"
 }
 
 var sides = [
