@@ -7,7 +7,12 @@ var potImageBox = document.querySelector('#pot-image-box')
 var foodSuggestionBox = document.querySelector('#food-suggestion-box')
 // Event Listeners
 
-sideButton.addEventListener('click', seeFoodSuggestion)
+sideButton.addEventListener('click', function(){
+    getRandomIndex(sides)
+    seeFoodSuggestion()
+    randomize()
+})
+
 // mainButton.addEventListener('onchange',)
 // dessertButton.addEventListener('onchange',)
 
@@ -18,7 +23,7 @@ function getRandomIndex(array) {
 }
 
 function randomize() {
-
+foodSuggestionBox.innerText = sides[getRandomIndex(sides)]
 }
 
 function seeFoodSuggestion() {
