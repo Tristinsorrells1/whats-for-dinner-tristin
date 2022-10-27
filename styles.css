@@ -36,7 +36,7 @@ main {
     min-height: 100%; 
 }
 
-.home-boxs {
+.home-boxes {
     background-color: rgba(225, 225, 225, .9);
     height: 200px;
     width: 300px;
@@ -60,7 +60,7 @@ main {
 #asterisk {
     color: red;
     vertical-align: super;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 span {
@@ -94,3 +94,24 @@ ul {
     width: 100%;
     padding: 1em;
 }
+
+.hidden {
+    display: none !important;
+}
+
+#food-suggestion-box {
+    font-style: italic;
+    text-align: center;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#food-suggestion-box > p {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+
+}
+
