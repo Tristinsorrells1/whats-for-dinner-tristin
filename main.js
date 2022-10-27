@@ -12,18 +12,21 @@ sideButton.addEventListener('click', function(){
     getRandomIndex(sides)
     seeFoodSuggestion()
     randomizeSides()
+    selectSide()
 })
 
 mainButton.addEventListener('click', function () {
     getRandomIndex(mains)
     seeFoodSuggestion()
     randomizeMains()
+    selectMain()
 })
 
 dessertButton.addEventListener('click', function () {
     getRandomIndex(desserts)
     seeFoodSuggestion()
     randomizeDesserts()
+    selectDessert()
 })
 
 
@@ -47,9 +50,26 @@ function randomizeDesserts() {
 }
 
 function seeFoodSuggestion() {
-    potImageBox.classList.toggle("hidden")
-    foodSuggestionBox.classList.toggle("hidden")
-    // youShouldMake.classList.toggle("hidden")
+    potImageBox.classList.add("hidden")
+    foodSuggestionBox.classList.remove("hidden")
+}
+
+function selectSide() {
+    sideButton.checked = true
+    dessertButton.checked = false
+    mainButton.checked = false
+}
+
+function selectMain() {
+    sideButton.checked = false
+    dessertButton.checked = false
+    mainButton.checked = true
+}
+
+function selectDessert() {
+    sideButton.checked = false
+    dessertButton.checked = true
+    mainButton.checked = false
 }
 
 var sides = [
