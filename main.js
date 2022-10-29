@@ -1,5 +1,4 @@
 // Variables
-
 var sideButton = document.querySelector('#side-button')
 var mainButton = document.querySelector('#main-button')
 var dessertButton = document.querySelector('#dessert-button')
@@ -13,26 +12,26 @@ var foodIdea = document.querySelector('#food-idea')
 sideButton.addEventListener('click', function(){
     getRandomIndex(sides)
     seeFoodSuggestion()
-    randomizeSides()
+    randomizeFoods(sides)
     selectSide()
 })
 
 mainButton.addEventListener('click', function () {
     getRandomIndex(mains)
     seeFoodSuggestion()
-    randomizeMains()
+    randomizeFoods(mains)
     selectMain()
 })
 
 dessertButton.addEventListener('click', function () {
     getRandomIndex(desserts)
     seeFoodSuggestion()
-    randomizeDesserts()
+    randomizeFoods(desserts)
     selectDessert()
 })
 
 letsCookButton.addEventListener('click', function() {
-    getRandomIndex(desserts)
+    getRandomIndex(sides)
     seeFoodSuggestion()
     randomMeal()
 
@@ -42,22 +41,14 @@ entireMealButton.addEventListener('click', selectEntireMeal)
 
 
 // Functions
-
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
 }
 
-function randomizeSides() {
-foodIdea.innerText = sides[getRandomIndex(sides)]
+function randomizeFoods(type) {
+foodIdea.innerText = type[getRandomIndex(type)]
 }
 
-function randomizeMains() {
-    foodIdea.innerText = mains[getRandomIndex(mains)]
-}
-
-function randomizeDesserts() {
-    foodIdea.innerText = desserts[getRandomIndex(desserts)]
-}
 
 function seeFoodSuggestion() {
     potImageBox.classList.add("hidden")
@@ -92,7 +83,7 @@ function selectEntireMeal() {
     entireMealButton.checked = true
 }
 
-function randomMeal(){
+function randomMeal() {
     if (entireMealButton.checked) {
         foodIdea.innerText = `${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`
     }
@@ -100,6 +91,7 @@ function randomMeal(){
     foodIdea.style.margin= "20px"
 }
 
+// Arrays
 var sides = [
     "French Fries",
     "Side Salad",
@@ -113,7 +105,6 @@ var sides = [
     "Carrots",
     "Peas",
     "Roasted Butternut Squash"
-
 ]
 
 var mains = [
