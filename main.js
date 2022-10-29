@@ -44,7 +44,6 @@ letsCookButton.addEventListener('click', function() {
 });
 
 
-
 // Functions
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
@@ -76,7 +75,6 @@ function formatMealSuggestion() {
     foodIdea.style.fontSize = "20px"
     foodIdea.style.margin = "20px"
 }
-
 
 // Arrays
 var sides = [
