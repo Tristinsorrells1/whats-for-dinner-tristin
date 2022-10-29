@@ -1,5 +1,4 @@
 // Variables
-
 var sideButton = document.querySelector('#side-button')
 var mainButton = document.querySelector('#main-button')
 var dessertButton = document.querySelector('#dessert-button')
@@ -8,55 +7,51 @@ var entireMealButton = document.querySelector('#entire-meal-button')
 var potImageBox = document.querySelector('#pot-image-box')
 var foodSuggestionBox = document.querySelector('#food-suggestion-box')
 var foodIdea = document.querySelector('#food-idea')
+var allButtons = document.querySelectorAll('.button')
 
 // Event Listeners
 sideButton.addEventListener('click', function(){
     getRandomIndex(sides)
     seeFoodSuggestion()
-    randomizeSides()
-    selectSide()
-})
+    randomizeFoods(sides)
+    selectButton(sideButton)
+});
 
 mainButton.addEventListener('click', function () {
     getRandomIndex(mains)
     seeFoodSuggestion()
-    randomizeMains()
-    selectMain()
-})
+    randomizeFoods(mains)
+    selectButton(mainButton)
+});
 
 dessertButton.addEventListener('click', function () {
     getRandomIndex(desserts)
     seeFoodSuggestion()
-    randomizeDesserts()
-    selectDessert()
-})
+    randomizeFoods(desserts)
+    selectButton(dessertButton)
+});
+
+entireMealButton.addEventListener('click', function() {
+    selectButton(entireMealButton)
+});
 
 letsCookButton.addEventListener('click', function() {
-    getRandomIndex(desserts)
+    getRandomIndex(sides)
     seeFoodSuggestion()
     randomMeal()
+    formatMealSuggestion()
 
-})
+});
 
-entireMealButton.addEventListener('click', selectEntireMeal)
 
 
 // Functions
-
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
 }
 
-function randomizeSides() {
-foodIdea.innerText = sides[getRandomIndex(sides)]
-}
-
-function randomizeMains() {
-    foodIdea.innerText = mains[getRandomIndex(mains)]
-}
-
-function randomizeDesserts() {
-    foodIdea.innerText = desserts[getRandomIndex(desserts)]
+function randomizeFoods(type) {
+    foodIdea.innerText = type[getRandomIndex(type)]
 }
 
 function seeFoodSuggestion() {
@@ -64,42 +59,26 @@ function seeFoodSuggestion() {
     foodSuggestionBox.classList.remove("hidden")
 }
 
-function selectSide() {
-    sideButton.checked = true
-    dessertButton.checked = false
-    mainButton.checked = false
-    entireMealButton.checked = false
+function selectButton(type) {
+    for (var i = 0; i < allButtons.length; i++) {
+        allButtons[i].checked = false
+        type.checked = true
+    }
 }
 
-function selectMain() {
-    sideButton.checked = false
-    dessertButton.checked = false
-    mainButton.checked = true
-    entireMealButton.checked = false
-}
-
-function selectDessert() {
-    sideButton.checked = false
-    dessertButton.checked = true
-    mainButton.checked = false
-    entireMealButton.checked = false
-}
-
-function selectEntireMeal() {
-    sideButton.checked = false
-    dessertButton.checked = false
-    mainButton.checked = false
-    entireMealButton.checked = true
-}
-
-function randomMeal(){
+function randomMeal() {
     if (entireMealButton.checked) {
         foodIdea.innerText = `${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!`
     }
-    foodIdea.style.fontSize= "20px"
-    foodIdea.style.margin= "20px"
 }
 
+function formatMealSuggestion() {
+    foodIdea.style.fontSize = "20px"
+    foodIdea.style.margin = "20px"
+}
+
+
+// Arrays
 var sides = [
     "French Fries",
     "Side Salad",
@@ -113,7 +92,6 @@ var sides = [
     "Carrots",
     "Peas",
     "Roasted Butternut Squash"
-
 ]
 
 var mains = [
