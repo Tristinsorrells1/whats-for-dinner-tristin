@@ -7,27 +7,28 @@ var entireMealButton = document.querySelector('#entire-meal-button')
 var potImageBox = document.querySelector('#pot-image-box')
 var foodSuggestionBox = document.querySelector('#food-suggestion-box')
 var foodIdea = document.querySelector('#food-idea')
+var allButtons = document.querySelectorAll('.button')
 
 // Event Listeners
 sideButton.addEventListener('click', function(){
     getRandomIndex(sides)
     seeFoodSuggestion()
     randomizeFoods(sides)
-    selectSide()
+    selectButton(sideButton)
 })
 
 mainButton.addEventListener('click', function () {
     getRandomIndex(mains)
     seeFoodSuggestion()
     randomizeFoods(mains)
-    selectMain()
+    selectButton(mainButton)
 })
 
 dessertButton.addEventListener('click', function () {
     getRandomIndex(desserts)
     seeFoodSuggestion()
     randomizeFoods(desserts)
-    selectDessert()
+    selectButton(dessertButton)
 })
 
 letsCookButton.addEventListener('click', function() {
@@ -55,26 +56,26 @@ function seeFoodSuggestion() {
     foodSuggestionBox.classList.remove("hidden")
 }
 
-function selectSide() {
-    sideButton.checked = true
-    dessertButton.checked = false
-    mainButton.checked = false
-    entireMealButton.checked = false
+function selectButton(type) {
+    for (var i = 0; i < allButtons.length; i++) {
+        allButtons[i].checked = false
+        type.checked = true
+    }
 }
 
-function selectMain() {
-    sideButton.checked = false
-    dessertButton.checked = false
-    mainButton.checked = true
-    entireMealButton.checked = false
-}
+// function selectMain() {
+//     sideButton.checked = false
+//     dessertButton.checked = false
+//     mainButton.checked = true
+//     entireMealButton.checked = false
+// }
 
-function selectDessert() {
-    sideButton.checked = false
-    dessertButton.checked = true
-    mainButton.checked = false
-    entireMealButton.checked = false
-}
+// function selectDessert() {
+//     sideButton.checked = false
+//     dessertButton.checked = true
+//     mainButton.checked = false
+//     entireMealButton.checked = false
+// }
 
 function selectEntireMeal() {
     sideButton.checked = false
